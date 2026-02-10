@@ -185,6 +185,16 @@ M.servers = {
     },
     -- }}}
 
+    -- {{{ Nix
+    nixd = {
+        cmd = { "nixd" },
+        filetypes = { "nix" },
+        root_markers = { ".git" },
+
+        settings = {},
+    },
+    -- }}}
+
     -- {{{ Bash
     bash_ls = {
         cmd = { "bash-language-server", "start" },
@@ -253,6 +263,8 @@ end
 
 ------------------------------------------------------------------------------------------------------------------
 
+-- {{{ Styling defaults
+
 -- The icons used for each symbol kind in completion menus
 M.kindIcons = {
     -- Callable things
@@ -306,5 +318,6 @@ M.sourceIcons = {
     snippet = "󱄽",
     unknown = "?",
 }
+-- }}}
 
 return M
