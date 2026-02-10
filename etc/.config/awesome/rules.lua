@@ -37,11 +37,10 @@ return {
     setup = function()
         -- All clients will match this rule.
         awful.rules.rules = gears.table.join(awful.rules.rules, {
-            id = "global",
-            rule = {},
-            properties = config.clients.properties,
+            { id = "global", rule = {}, properties = config.clients.properties },
         })
 
-        awful.rules.rules = flatten(config.rules)
+        -- Add the custom rules
+        awful.rules.rules = gears.table.join(awful.rules.rules, flatten(config.rules))
     end,
 }

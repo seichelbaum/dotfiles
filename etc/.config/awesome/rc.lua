@@ -77,7 +77,7 @@ require("modules.titlebar").setup()
 
 -- Wibar setup
 require("modules.wibar").setup()
---
+
 -- More features:
 require("modules.powermenu").setup()
 require("modules.behaviors.centerInParent").setup()

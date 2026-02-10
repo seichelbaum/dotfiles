@@ -56,41 +56,38 @@ return {
             local buttonsTray = wibox.widget({
                 {
                     {
-                        --[[
-                        {
-                            awful.titlebar.widget.stickybutton(c),
-                            left   = lib.dpi(3),
-                            top    = lib.dpi(3),
-                            bottom = lib.dpi(3),
-                            right  = lib.dpi(3),
-                            widget = wibox.container.margin,
-                        },
-                        {
-                            awful.titlebar.widget.ontopbutton(c),
-                            left   = lib.dpi(3),
-                            top    = lib.dpi(3),
-                            bottom = lib.dpi(3),
-                            right  = lib.dpi(3),
-                            widget = wibox.container.margin,
-                        },
-
-                        {
-                            awful.titlebar.widget.floatingbutton(c),
-                            left   = lib.dpi(3),
-                            top    = lib.dpi(3),
-                            bottom = lib.dpi(3),
-                            right  = lib.dpi(3),
-                            widget = wibox.container.margin,
-                        },
-                        {
-                            awful.titlebar.widget.maximizedbutton(c),
-                            left   = lib.dpi(3),
-                            top    = lib.dpi(3),
-                            bottom = lib.dpi(3),
-                            right  = lib.dpi(3),
-                            widget = wibox.container.margin,
-                        },
-                        --]]
+                        -- {
+                        --     awful.titlebar.widget.stickybutton(c),
+                        --     left   = lib.dpi(3),
+                        --     top    = lib.dpi(3),
+                        --     bottom = lib.dpi(3),
+                        --     right  = lib.dpi(3),
+                        --     widget = wibox.container.margin,
+                        -- },
+                        -- {
+                        --     awful.titlebar.widget.ontopbutton(c),
+                        --     left   = lib.dpi(3),
+                        --     top    = lib.dpi(3),
+                        --     bottom = lib.dpi(3),
+                        --     right  = lib.dpi(3),
+                        --     widget = wibox.container.margin,
+                        -- },
+                        -- {
+                        --     awful.titlebar.widget.floatingbutton(c),
+                        --     left   = lib.dpi(3),
+                        --     top    = lib.dpi(3),
+                        --     bottom = lib.dpi(3),
+                        --     right  = lib.dpi(3),
+                        --     widget = wibox.container.margin,
+                        -- },
+                        -- {
+                        --     awful.titlebar.widget.maximizedbutton(c),
+                        --     left   = lib.dpi(3),
+                        --     top    = lib.dpi(3),
+                        --     bottom = lib.dpi(3),
+                        --     right  = lib.dpi(3),
+                        --     widget = wibox.container.margin,
+                        -- },
                         {
                             awful.titlebar.widget.minimizebutton(c),
                             left = lib.dpi(3),
@@ -124,43 +121,47 @@ return {
                 widget = wibox.container.background,
             })
 
-            awful.titlebar(c, {
-                size = beautiful.titlebar_height,
-            }).widget = {
-                { -- Left
-                    {
-                        awful.titlebar.widget.iconwidget(c),
-                        buttons = buttons,
-                        layout = wibox.layout.fixed.horizontal,
-                    },
-                    left = lib.dpi(5),
-                    top = lib.dpi(5),
-                    bottom = lib.dpi(5),
-                    right = lib.dpi(5),
-                    widget = wibox.container.margin,
-                },
-                { -- Middle
-                    { -- Title
-                        halign = "center",
-                        widget = awful.titlebar.widget.titlewidget(c),
-                    },
-                    buttons = buttons,
-                    layout = wibox.layout.flex.horizontal,
-                },
-                { -- Right
-                    {
-                        buttonsTray,
-                        left = lib.dpi(3),
-                        top = lib.dpi(2),
-                        bottom = lib.dpi(2),
-                        right = lib.dpi(3),
+            awful
+                .titlebar(c, {
+                    size = beautiful.titlebar_height,
+                })
+                :setup({
+
+                    { -- Left
+                        {
+                            awful.titlebar.widget.iconwidget(c),
+                            buttons = buttons,
+                            layout = wibox.layout.fixed.horizontal,
+                        },
+                        left = lib.dpi(5),
+                        top = lib.dpi(5),
+                        bottom = lib.dpi(5),
+                        right = lib.dpi(5),
                         widget = wibox.container.margin,
                     },
+                    { -- Middle
+                        { -- Title
+                            align = "center",
+                            widget = awful.titlebar.widget.titlewidget(c),
+                        },
+                        buttons = buttons,
+                        layout = wibox.layout.flex.horizontal,
+                    },
+                    { -- Right
+                        {
+                            buttonsTray,
+                            left = lib.dpi(3),
+                            top = lib.dpi(3),
+                            bottom = lib.dpi(3),
+                            right = lib.dpi(3),
+                            widget = wibox.container.margin,
+                        },
 
-                    layout = wibox.layout.fixed.horizontal(),
-                },
-                layout = wibox.layout.align.horizontal,
-            }
+                        layout = wibox.layout.fixed.horizontal(),
+                    },
+
+                    layout = wibox.layout.align.horizontal,
+                })
 
             -- Ensure the titlebar visibility is toggled for floats/non-floats
             updateTitlebarVisibility(c, true)
