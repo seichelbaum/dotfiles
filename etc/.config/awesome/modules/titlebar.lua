@@ -113,7 +113,7 @@ return {
                     widget = wibox.container.margin,
                 },
 
-                bg = "alpha", --beautiful.palette.bg_lighter3,
+                bg = beautiful.palette.bg_lighter5,
                 shape = function(cr, w, h)
                     gears.shape.rounded_rect(cr, w, h, lib.dpi(5))
                 end,
@@ -151,9 +151,9 @@ return {
                         {
                             buttonsTray,
                             left = lib.dpi(3),
-                            top = lib.dpi(3),
-                            bottom = lib.dpi(3),
-                            right = lib.dpi(3),
+                            top = lib.dpi(5),
+                            bottom = lib.dpi(5),
+                            right = lib.dpi(5),
                             widget = wibox.container.margin,
                         },
 

@@ -136,7 +136,7 @@ return {
 
         -- They deviate quite a bit from the default:
         theme.titlebar_bg_normal = theme.palette.bg_lighter2
-        theme.titlebar_bg_focus = theme.palette.bg_lighter5
+        theme.titlebar_bg_focus = theme.palette.bg_lighter4
         theme.titlebar_fg_normal = theme.palette.fg_darker3
         theme.titlebar_fg_focus = theme.palette.fg
 
