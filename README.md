@@ -9,13 +9,13 @@ An opinionated set of configuration files. My personal focus is on minimalism. T
 
 Everything in etc and bin is symlinked to $HOME. The directory structure is replicated as is. Thats it. No fancy dependencies, no npm install 432GB worth of JavaScript.
 
-Tailored towards my NixOS configuration: https://github.com/sebastian-eichelbaum/nixos
+Tailored towards my NixOS configuration: https://github.com/seichelbaum/nixos
 
 ## Setup
 
 ```sh
 cd ~
-git clone git@github.com:sebastian-eichelbaum/dotfiles.git .dotfiles
+git clone git@github.com:seichelbaum/dotfiles.git .dotfiles
 cd .dotfiles
 ./update
 ```
