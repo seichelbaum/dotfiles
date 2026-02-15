@@ -1693,7 +1693,7 @@ return {
 
     -- {{{ vim-doge to generate doc for functions.
     {
-        "sebastian-eichelbaum/vim-doge",
+        "seichelbaum/vim-doge",
 
         build = ":call doge#install()",
 
