@@ -313,7 +313,7 @@ local rules = {
                 callback = awful.client.setslave,
             },
             {
-                rule = { class = "Ferdium" },
+                rule = { class = "ferdium" },
                 properties = { size_hints_honor = true, floating = false },
                 callback = awful.client.setslave,
             },
